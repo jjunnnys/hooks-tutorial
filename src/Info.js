@@ -3,9 +3,18 @@ import React, { useState, useEffect } from 'react';
 const Info = () => {
   const [name, setName] = useState('');
   const [nickname, setNickname] = useState('');
+  /* 
+    특정 값이 업데이트될 때만 실행 - 클래스형 컴포넌트
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.value !== this.props.value) {
+            doSomething();
+        }
+    }
+  */
+
   useEffect(() => {
-    console.log('마운트될 때만 실행');
-  }, []);
+    console.log(name);
+  }, [name]);
 
   const onChangeName = (e) => {
     setName(e.target.value);
