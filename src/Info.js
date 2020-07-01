@@ -3,17 +3,12 @@ import React, { useState, useEffect } from 'react';
 const Info = () => {
   const [name, setName] = useState('');
   const [nickname, setNickname] = useState('');
-  /* 
-    특정 값이 업데이트될 때만 실행 - 클래스형 컴포넌트
-    componentDidUpdate(prevProps, prevState) {
-        if (prevProps.value !== this.props.value) {
-            doSomething();
-        }
-    }
-  */
 
   useEffect(() => {
-    console.log(name);
+    console.log('effect-> ', name);
+    return () => {
+      console.log('cleanup-> ', name);
+    };
   }, [name]);
 
   const onChangeName = (e) => {
