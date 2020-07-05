@@ -27,7 +27,7 @@ const Average = () => {
 
   return (
     <div>
-      <input type="text" value={number} onChange={onChange} />
+      <input type="text" value={number} onChange={onChange} ref={inputE1} />
       <button onClick={onInsert}>등록</button>
       <ul>
         {list.map((value, index) => {
