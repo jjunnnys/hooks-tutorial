@@ -12,8 +12,13 @@ const Info = () => {
   return (
     <div>
       <div>
-        <input type="text" value={name} onChange={onChange} />
-        <input type="text" value={nickname} onChange={onChange} />
+        <input type="text" name="name" value={name} onChange={onChange} />
+        <input
+          type="text"
+          name="nickname"
+          value={nickname}
+          onChange={onChange}
+        />
       </div>
       <div>
         <div>
